@@ -32,6 +32,9 @@ export default function Home() {
           className="flex flex-col"
         >
           <div className="mt-2 flex flex-col gap-2">
+            <div className="text-4xl font-semibold mt-2 mb-2">
+              {formula.name}
+            </div>
             {formula.drugs.map((drug) => (
               <Card key={drug}>
                 <CardHeader>
