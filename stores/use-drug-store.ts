@@ -7,12 +7,14 @@ export type drugListType = {
 type drugStoreType = {
   drugList: drugListType;
   setDrug: (value: drugListType) => void;
-  resetState: () => void;
+  resetDrug: () => void;
 };
 
 export const useDrugStore = create<drugStoreType>((set) => ({
   drugList: {
     fiveFU: 0,
+    fiveFUPush: 0,
+    fiveFUDrip: 0,
     leucovorin: 0,
     cyclophosphamide: 0,
     doxorubicin: 0,
@@ -23,10 +25,12 @@ export const useDrugStore = create<drugStoreType>((set) => ({
   },
   setDrug: (value) =>
     set((state) => ({ drugList: { ...state.drugList, ...value } })),
-  resetState: () =>
+  resetDrug: () =>
     set((state) => ({
       drugList: {
         fiveFU: 0,
+        fiveFUPush: 0,
+        fiveFUDrip: 0,
         leucovorin: 0,
         cyclophosphamide: 0,
         doxorubicin: 0,

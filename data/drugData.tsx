@@ -9,11 +9,11 @@ export const formulaList = [
   },
   {
     name: "FOLFOX4",
-    drugs: ["oxaliplatin", "leucovorin", "fiveFU"],
+    drugs: ["oxaliplatin", "leucovorin", "fiveFUPush", "fiveFUDrip"],
   },
   {
     name: "FOLFIRI",
-    drugs: ["irinotecan", "leucovorin", "fiveFU"],
+    drugs: ["irinotecan", "leucovorin", "fiveFUPush", "fiveFUDrip"],
   },
   {
     name: "Placlitaxel",
@@ -29,6 +29,16 @@ export const drugList = [
   {
     displayName: "5-FU",
     refName: "fiveFU",
+    divider: 50,
+  },
+  {
+    displayName: "5-FU [push]",
+    refName: "fiveFUPush",
+    divider: 50,
+  },
+  {
+    displayName: "5-FU [drip]",
+    refName: "fiveFUDrip",
     divider: 50,
   },
   {

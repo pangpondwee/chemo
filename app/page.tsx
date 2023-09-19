@@ -1,11 +1,13 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { formulaList, drugList } from "@/data/drugData";
 import { drugListType, useDrugStore } from "@/stores/use-drug-store";
+import { RotateCcw } from "lucide-react";
 
 const calculateMl = (drug: string, drugListStore: drugListType) => {
   const drugData = drugList.find((elem) => elem.refName == drug);
@@ -15,6 +17,7 @@ const calculateMl = (drug: string, drugListStore: drugListType) => {
 export default function Home() {
   const drugListStore = useDrugStore((state) => state.drugList);
   const setDrug = useDrugStore((state) => state.setDrug);
+  const resetDrug = useDrugStore((state) => state.resetDrug);
 
   return (
     <Tabs defaultValue={formulaList.at(0)?.name} className="w-full pl-4 pr-4">
@@ -32,8 +35,12 @@ export default function Home() {
           className="flex flex-col"
         >
           <div className="mt-2 flex flex-col gap-2">
-            <div className="text-4xl font-semibold mt-2 mb-2">
-              {formula.name}
+            <div className="flex justify-between mt-2 mb-2">
+              <div className="text-4xl font-semibold">{formula.name}</div>
+              <Button variant={"outline"} onClick={resetDrug} className="gap-2">
+                <RotateCcw className="h-4 w-4" />
+                Reset
+              </Button>
             </div>
             {formula.drugs.map((drug) => (
               <Card key={drug}>

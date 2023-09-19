@@ -5,6 +5,7 @@ import {
   IBM_Plex_Sans_Thai_Looped,
   Anuphan,
   Sarabun,
+  Noto_Sans_Thai_Looped,
 } from "next/font/google";
 import { ThemeProvider } from "@/components/themeProvider";
 import { ModeToggle } from "@/components/modeToggle";
@@ -22,6 +23,10 @@ const sarabun = Sarabun({
   subsets: ["thai"],
   weight: ["400", "500", "600"],
 });
+const noto = Noto_Sans_Thai_Looped({
+  subsets: ["thai"],
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   title: "SKPharm",
@@ -36,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sarabun.className}>
+      <body className={noto.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col">
             <div className="flex items-center place-content-between p-4">
