@@ -9,6 +9,7 @@ import {
 } from "next/font/google";
 import { ThemeProvider } from "@/components/themeProvider";
 import { ModeToggle } from "@/components/modeToggle";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const ibm = IBM_Plex_Sans_Thai_Looped({
@@ -49,6 +50,7 @@ export default function RootLayout({
               <ModeToggle />
             </div>
             {children}
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
