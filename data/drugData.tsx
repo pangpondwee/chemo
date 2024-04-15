@@ -1,79 +1,122 @@
-export const formulaList = [
-  {
-    name: "FAC",
-    drugs: ["doxorubicin", "fiveFU", "cyclophosphamide"],
-  },
-  {
-    name: "AC",
-    drugs: ["doxorubicin", "cyclophosphamide"],
-  },
-  {
-    name: "FOLFOX4",
-    drugs: ["oxaliplatin", "leucovorin", "fiveFUPush", "fiveFUDrip"],
-  },
-  {
-    name: "FOLFIRI",
-    drugs: ["irinotecan", "leucovorin", "fiveFUPush", "fiveFUDrip"],
-  },
-  {
-    name: "Placlitaxel",
-    drugs: ["paclitaxel"],
-  },
-  {
-    name: "MTX",
-    drugs: ["methotrexate"],
-  },
+export type formulaNameType =
+  | "FAC"
+  | "AC"
+  | "FOLFOX4"
+  | "FOLFIRI"
+  | "Placlitaxel"
+  | "MTX";
+
+export type drugNameType =
+  | "fiveFU"
+  | "fiveFUPush"
+  | "fiveFUDrip"
+  | "leucovorin"
+  | "cyclophosphamide"
+  | "doxorubicin"
+  | "oxaliplatin"
+  | "irinotecan"
+  | "paclitaxel"
+  | "methotrexate";
+
+export type formulaListType = {
+  [formula in formulaNameType]?: drugType;
+};
+
+export type drugType = {
+  [drug in drugNameType]?: { doseRegimen: number };
+};
+
+export type drugListType = {
+  [drug in drugNameType]: { displayName: string; divider: number };
+};
+
+export const formulaNameList: formulaNameType[] = [
+  "FAC",
+  "AC",
+  "FOLFOX4",
+  "FOLFIRI",
+  "Placlitaxel",
+  "MTX",
 ];
 
-export const drugList = [
-  {
+export const drugNameList: drugNameType[] = [
+  "fiveFU",
+  "fiveFUPush",
+  "fiveFUDrip",
+  "leucovorin",
+  "cyclophosphamide",
+  "doxorubicin",
+  "oxaliplatin",
+  "irinotecan",
+  "paclitaxel",
+  "methotrexate",
+];
+
+export const formulaList: formulaListType = {
+  FAC: {
+    doxorubicin: { doseRegimen: 50 },
+    fiveFU: { doseRegimen: 500 },
+    cyclophosphamide: { doseRegimen: 500 },
+  },
+  AC: {
+    doxorubicin: { doseRegimen: 60 },
+    cyclophosphamide: { doseRegimen: 600 },
+  },
+  FOLFOX4: {
+    oxaliplatin: { doseRegimen: 85 },
+    leucovorin: { doseRegimen: 200 },
+    fiveFUPush: { doseRegimen: 400 },
+    fiveFUDrip: { doseRegimen: 600 },
+  },
+  FOLFIRI: {
+    irinotecan: { doseRegimen: 180 },
+    leucovorin: { doseRegimen: 200 },
+    fiveFUPush: { doseRegimen: 400 },
+    fiveFUDrip: { doseRegimen: 600 },
+  },
+  Placlitaxel: { paclitaxel: { doseRegimen: 80 } },
+  MTX: { methotrexate: { doseRegimen: 50 } },
+};
+
+export const drugList: drugListType = {
+  fiveFU: {
     displayName: "5-FU",
-    refName: "fiveFU",
     divider: 50,
   },
-  {
+  fiveFUPush: {
     displayName: "5-FU [push]",
-    refName: "fiveFUPush",
     divider: 50,
   },
-  {
+  fiveFUDrip: {
     displayName: "5-FU [drip]",
-    refName: "fiveFUDrip",
     divider: 50,
   },
-  {
+  leucovorin: {
     displayName: "leucovorin",
-    refName: "leucovorin",
     divider: 10,
   },
-  {
+  cyclophosphamide: {
     displayName: "cyclophosphamide",
-    refName: "cyclophosphamide",
     divider: 20,
   },
-  {
+  doxorubicin: {
     displayName: "doxorubicin",
-    refName: "doxorubicin",
     divider: 2,
   },
-  {
+  oxaliplatin: {
     displayName: "oxaliplatin",
-    refName: "oxaliplatin",
     divider: 5,
   },
-  {
+  irinotecan: {
     displayName: "irinotecan",
-    refName: "irinotecan",
     divider: 20,
   },
-  {
+  paclitaxel: {
     displayName: "paclitaxel",
-    refName: "paclitaxel",
     divider: 6,
   },
-  {
+  methotrexate: {
     displayName: "methotrexate",
-    refName: "methotrexate",
     divider: 25,
   },
-];
+};

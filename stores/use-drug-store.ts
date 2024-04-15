@@ -10,6 +10,17 @@ type drugStoreType = {
   resetDrug: () => void;
 };
 
+export type patientInfoType = {
+  weight: number;
+  height: number;
+  bsa: number;
+};
+
+type patientInfoStoreType = {
+  patientInfo: patientInfoType;
+  setPatientInfo: (value: patientInfoType) => void;
+};
+
 export const useDrugStore = create<drugStoreType>((set) => ({
   drugList: {
     fiveFU: 0,
@@ -26,7 +37,7 @@ export const useDrugStore = create<drugStoreType>((set) => ({
   setDrug: (value) =>
     set((state) => ({ drugList: { ...state.drugList, ...value } })),
   resetDrug: () =>
-    set((state) => ({
+    set(() => ({
       drugList: {
         fiveFU: 0,
         fiveFUPush: 0,
@@ -40,4 +51,14 @@ export const useDrugStore = create<drugStoreType>((set) => ({
         methotrexate: 0,
       },
     })),
+}));
+
+export const usePatientInfoStore = create<patientInfoStoreType>((set) => ({
+  patientInfo: {
+    weight: 0,
+    height: 0,
+    bsa: 0,
+  },
+  setPatientInfo: (value) =>
+    set((state) => ({ patientInfo: { ...state.patientInfo, ...value } })),
 }));
