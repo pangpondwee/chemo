@@ -69,15 +69,15 @@ export default function FormulaPage({ params }: FormulaPageProps) {
               <CardContent className="flex flex-col gap-4">
                 <div className="flex gap-4 flex-1">
                   <div className="space-y-1 w-full">
-                    <div>
-                      Dose Regimen (mg/m<sup>2</sup>)
+                    <div className="font-medium">
+                      Dosage Regimen (mg/m<sup>2</sup>)
                     </div>
                     <div className="text-3xl font-bold">
                       {formula?.[drug as drugNameType]?.doseRegimen.toFixed(2)}
                     </div>
                   </div>
                   <div className="space-y-1 w-full">
-                    <div>Calculated Dose (mg)</div>
+                    <div className="font-medium">Calculated Dose (mg)</div>
                     <div className="text-3xl font-bold">
                       {formula && drug in formula && patientInfoStore.bsa
                         ? (
@@ -110,7 +110,7 @@ export default function FormulaPage({ params }: FormulaPageProps) {
                     />
                   </div>
                   <div className="space-y-1 w-full">
-                    <div>Volume (ml)</div>
+                    <div className="font-medium">Volume (ml)</div>
                     <div className="text-3xl font-bold">
                       {calculateMl(drug as drugNameType, drugListStore).toFixed(
                         2

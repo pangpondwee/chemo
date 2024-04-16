@@ -3,7 +3,7 @@ export type formulaNameType =
   | "AC"
   | "FOLFOX4"
   | "FOLFIRI"
-  | "Placlitaxel"
+  | "Paclitaxel"
   | "MTX";
 
 export type drugNameType =
@@ -35,7 +35,7 @@ export const formulaNameList: formulaNameType[] = [
   "AC",
   "FOLFOX4",
   "FOLFIRI",
-  "Placlitaxel",
+  "Paclitaxel",
   "MTX",
 ];
 
@@ -74,7 +74,7 @@ export const formulaList: formulaListType = {
     fiveFUPush: { doseRegimen: 400 },
     fiveFUDrip: { doseRegimen: 600 },
   },
-  Placlitaxel: { paclitaxel: { doseRegimen: 80 } },
+  Paclitaxel: { paclitaxel: { doseRegimen: 80 } },
   MTX: { methotrexate: { doseRegimen: 50 } },
 };
 
@@ -92,31 +92,31 @@ export const drugList: drugListType = {
     divider: 50,
   },
   leucovorin: {
-    displayName: "leucovorin",
+    displayName: "Leucovorin",
     divider: 10,
   },
   cyclophosphamide: {
-    displayName: "cyclophosphamide",
+    displayName: "Cyclophosphamide",
     divider: 20,
   },
   doxorubicin: {
-    displayName: "doxorubicin",
+    displayName: "Doxorubicin",
     divider: 2,
   },
   oxaliplatin: {
-    displayName: "oxaliplatin",
+    displayName: "Oxaliplatin",
     divider: 5,
   },
   irinotecan: {
-    displayName: "irinotecan",
+    displayName: "Irinotecan",
     divider: 20,
   },
   paclitaxel: {
-    displayName: "paclitaxel",
+    displayName: "Paclitaxel",
     divider: 6,
   },
   methotrexate: {
-    displayName: "methotrexate",
+    displayName: "Methotrexate",
     divider: 25,
   },
 };

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <nav className="px-4 h-16 items-center flex justify-center sticky top-0 bg-background/90 backdrop-blur-sm border-b">
-        <h1 className="text-xl font-bold">คำนวณขนาดยา</h1>
+        <h1 className="text-xl font-bold">คำนวณยาเคมีบำบัด</h1>
       </nav>
       <div className="flex flex-col gap-4 p-4">
         <Card>
