@@ -39,7 +39,7 @@ export default function FormulaPage({ params }: FormulaPageProps) {
 
   return (
     <>
-      <nav className="flex justify-between sticky top-0 h-16 px-4 items-center bg-background/90 backdrop-blur-sm border-b">
+      <nav className="flex justify-between sticky top-0 h-16 px-4 items-center bg-background/90 backdrop-blur-sm border-b z-50">
         <Button variant={"link"} size={"link"} asChild>
           <Link href="/">
             <ChevronLeft />

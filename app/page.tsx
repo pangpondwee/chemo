@@ -10,7 +10,7 @@ export default function Home() {
   const patientInfoStore = usePatientInfoStore((state) => state.patientInfo);
   return (
     <>
-      <nav className="px-4 h-16 items-center flex justify-center sticky top-0 bg-background/90 backdrop-blur-sm border-b">
+      <nav className="px-4 h-16 items-center flex justify-center sticky top-0 bg-background/90 backdrop-blur-sm border-b z-50">
         <h1 className="text-xl font-bold">คำนวณยาเคมีบำบัด</h1>
       </nav>
       <div className="flex flex-col gap-4 p-4">
