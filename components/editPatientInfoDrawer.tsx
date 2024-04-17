@@ -138,7 +138,7 @@ export default function EditPatientInfoDrawer() {
                 <p className="font-bold">
                   {isNaN(weight) || isNaN(height)
                     ? (0).toFixed(2)
-                    : calculateBsa(weight, height)}{" "}
+                    : calculateBsa(weight, height).toFixed(2)}{" "}
                   m<sup>2</sup>
                 </p>
               </div>

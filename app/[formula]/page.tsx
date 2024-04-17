@@ -34,7 +34,7 @@ export default function FormulaPage({ params }: FormulaPageProps) {
   const setDrug = useDrugStore((state) => state.setDrug);
   const resetDrug = useDrugStore((state) => state.resetDrug);
   const formulaName = params.formula;
-  const formula = formulaList[params.formula];
+  const formula = formulaList[params.formula]?.drugs;
   const patientInfoStore = usePatientInfoStore((state) => state.patientInfo);
 
   return (
@@ -46,7 +46,9 @@ export default function FormulaPage({ params }: FormulaPageProps) {
             กลับ
           </Link>
         </Button>
-        <div className="text-xl font-bold">{formulaName}</div>
+        <div className="text-xl font-bold">
+          {formulaList?.[formulaName as formulaNameType]?.displayName}
+        </div>
         <Button
           variant={"link"}
           size={"link"}

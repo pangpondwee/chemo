@@ -1,7 +1,7 @@
 "use client";
 import EditPatientInfoDrawer from "@/components/editPatientInfoDrawer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { formulaNameList } from "@/data/drugData";
+import { formulaList, formulaNameList, formulaNameType } from "@/data/drugData";
 import { usePatientInfoStore } from "@/stores/use-drug-store";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -63,7 +63,9 @@ export default function Home() {
           >
             <Card key={formula}>
               <CardHeader className="flex-row justify-between items-center space-y-0">
-                <CardTitle>{formula}</CardTitle>
+                <CardTitle>
+                  {formulaList?.[formula as formulaNameType]?.displayName}
+                </CardTitle>
                 <ChevronRight className="text-muted-foreground" />
               </CardHeader>
             </Card>

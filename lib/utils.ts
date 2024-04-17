@@ -6,5 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function calculateBsa(weight: number, height: number) {
-  return Math.min(Math.sqrt((weight * height) / 3600), 2).toFixed(2);
+  return Math.min(Math.sqrt((weight * height) / 3600), 2);
 }
