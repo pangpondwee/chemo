@@ -18,6 +18,9 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        md: "0px 0px 16px 0px rgba(39, 39, 63, 0.08)",
+      },
       fontFamily: {
         sans: ["var(--font-anuphan)", ...defaultTheme.fontFamily.sans],
       },

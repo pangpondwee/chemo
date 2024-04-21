@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${anuphan.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" forcedTheme="light">
           {/* <div className="flex flex-col">
             <div className="flex items-center place-content-between p-4 border-b border-border">
               <Link href={"/"} className="text-xl font-semibold">

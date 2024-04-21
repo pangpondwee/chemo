@@ -134,7 +134,7 @@ export default function EditPatientInfoDrawer() {
               />
               <Separator className="mt-2 mb-1" />
               <div className="flex justify-between">
-                <p className="text-muted-foreground">BSA ที่คำนวณได้</p>
+                <p className="text-muted-foreground/60">BSA ที่คำนวณได้</p>
                 <p className="font-bold">
                   {isNaN(weight) || isNaN(height)
                     ? (0).toFixed(2)

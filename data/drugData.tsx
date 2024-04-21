@@ -1,3 +1,9 @@
+export type formulaGroupNameType =
+  | "colorectalCancer"
+  | "breastCancer"
+  | "ectopicPregnancy"
+  | "prostateCancer";
+
 export type formulaNameType =
   | "folfox4"
   | "folfiri"
@@ -23,6 +29,13 @@ export type drugNameType =
   | "gemcitabine"
   | "cisplatin";
 
+export type formulaGroupListType = {
+  [formulaGroup in formulaGroupNameType]?: {
+    displayName: string;
+    formulas: formulaNameType[];
+  };
+};
+
 export type formulaListType = {
   [formula in formulaNameType]?: {
     displayName: string;
@@ -37,6 +50,13 @@ export type drugType = {
 export type drugListType = {
   [drug in drugNameType]: { displayName: string; divider: number };
 };
+
+export const formulaGroupNameList: formulaGroupNameType[] = [
+  "colorectalCancer",
+  "breastCancer",
+  "ectopicPregnancy",
+  "prostateCancer",
+];
 
 export const formulaNameList: formulaNameType[] = [
   "folfox4",
@@ -62,6 +82,25 @@ export const drugNameList: drugNameType[] = [
   "methotrexate",
   "docetaxel",
 ];
+
+export const formulaGroupList: formulaGroupListType = {
+  colorectalCancer: {
+    displayName: "Colorectal cancer",
+    formulas: ["folfox4", "folfiri"],
+  },
+  breastCancer: {
+    displayName: "Breast cancer",
+    formulas: ["fac", "ac", "paclitaxel"],
+  },
+  ectopicPregnancy: {
+    displayName: "Ectopic pregnancy",
+    formulas: ["mtx"],
+  },
+  prostateCancer: {
+    displayName: "Prostate cancer",
+    formulas: ["docetaxel", "gemcitabinePlusCisplatin"],
+  },
+};
 
 export const formulaList: formulaListType = {
   folfox4: {
