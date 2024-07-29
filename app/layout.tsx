@@ -36,6 +36,9 @@ export default function RootLayout({
             </div> */}
           <div className="flex flex-col bg-background" vaul-drawer-wrapper="">
             {children}
+            <footer className="text-sm px-4 py-2 border-t-[0.5px] border-border/20">
+              © Ampha Weerakul. All rights reserved.
+            </footer>
           </div>
           <Analytics />
           {/* </div> */}
