@@ -22,6 +22,7 @@ import Link from "next/link";
 const backgroundColors = {
   folfox4: "from-[#CEDBFD] to-[#CCFFF3]",
   folfiri: "from-[#CEDBFD] to-[#CCFFF3]",
+  capox: "from-[#CEDBFD] to-[#CCFFF3]",
   fac: "from-[#F5CCFF] to-[#FFE3CC]",
   ac: "from-[#F5CCFF] to-[#FFE3CC]",
   paclitaxel: "from-[#F5CCFF] to-[#FFE3CC]",

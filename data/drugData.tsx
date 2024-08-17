@@ -7,6 +7,7 @@ export type formulaGroupNameType =
 export type formulaNameType =
   | "folfox4"
   | "folfiri"
+  | "capox"
   | "fac"
   | "ac"
   | "paclitaxel"
@@ -86,7 +87,7 @@ export const drugNameList: drugNameType[] = [
 export const formulaGroupList: formulaGroupListType = {
   colorectalCancer: {
     displayName: "Colorectal cancer",
-    formulas: ["folfox4", "folfiri"],
+    formulas: ["folfox4", "folfiri", "capox"],
   },
   breastCancer: {
     displayName: "Breast cancer",
@@ -119,6 +120,12 @@ export const formulaList: formulaListType = {
       leucovorin: { doseRegimen: 200 },
       fiveFUPush: { doseRegimen: 400 },
       fiveFUDrip: { doseRegimen: 600 },
+    },
+  },
+  capox: {
+    displayName: "CAPOX",
+    drugs: {
+      oxaliplatin: { doseRegimen: 85 },
     },
   },
   fac: {
