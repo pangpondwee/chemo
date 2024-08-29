@@ -87,7 +87,8 @@ export const drugNameList: drugNameType[] = [
 export const formulaGroupList: formulaGroupListType = {
   colorectalCancer: {
     displayName: "Colorectal cancer",
-    formulas: ["folfox4", "folfiri", "capox"],
+    // formulas: ["folfox4", "folfiri", "capox"],
+    formulas: ["folfox4", "folfiri"],
   },
   breastCancer: {
     displayName: "Breast cancer",
