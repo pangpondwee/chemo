@@ -68,7 +68,7 @@ export default function EditPatientInfoDrawer() {
             <DrawerHeader>
               <div className="flex justify-between">
                 <DrawerClose>
-                  <Button variant={"link"} size={"link"}>
+                  <Button type="button" variant={"link"} size={"link"}>
                     ยกเลิก
                   </Button>
                 </DrawerClose>
