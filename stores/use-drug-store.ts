@@ -36,6 +36,9 @@ export const useDrugStore = create<drugStoreType>((set) => ({
     docetaxel: 0,
     gemcitabine: 0,
     cisplatin: 0,
+    bleomycin: 0,
+    vinblastine: 0,
+    dacarbazine: 0,
   },
   setDrug: (value) =>
     set((state) => ({ drugList: { ...state.drugList, ...value } })),
@@ -55,6 +58,9 @@ export const useDrugStore = create<drugStoreType>((set) => ({
         docetaxel: 0,
         gemcitabine: 0,
         cisplatin: 0,
+        bleomycin: 0,
+        vinblastine: 0,
+        dacarbazine: 0,
       },
     })),
 }));

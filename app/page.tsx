@@ -19,6 +19,7 @@ const labelColors = {
   breastCancer: "text-[#9C00C3]",
   ectopicPregnancy: "text-[#0C9200]",
   prostateCancer: "text-[#FF902A]",
+  hodgkinLymphoma: "text-[#db2777]",
 };
 
 export default function Home() {

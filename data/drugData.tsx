@@ -2,7 +2,8 @@ export type formulaGroupNameType =
   | "colorectalCancer"
   | "breastCancer"
   | "ectopicPregnancy"
-  | "prostateCancer";
+  | "prostateCancer"
+  | "hodgkinLymphoma";
 
 export type formulaNameType =
   | "folfox4"
@@ -13,7 +14,8 @@ export type formulaNameType =
   | "paclitaxel"
   | "mtx"
   | "docetaxel"
-  | "gemcitabinePlusCisplatin";
+  | "gemcitabinePlusCisplatin"
+  | "abvd";
 
 export type drugNameType =
   | "fiveFU"
@@ -28,7 +30,10 @@ export type drugNameType =
   | "methotrexate"
   | "docetaxel"
   | "gemcitabine"
-  | "cisplatin";
+  | "cisplatin"
+  | "bleomycin"
+  | "vinblastine"
+  | "dacarbazine";
 
 export type formulaGroupListType = {
   [formulaGroup in formulaGroupNameType]?: {
@@ -57,6 +62,7 @@ export const formulaGroupNameList: formulaGroupNameType[] = [
   "breastCancer",
   "ectopicPregnancy",
   "prostateCancer",
+  "hodgkinLymphoma",
 ];
 
 export const formulaNameList: formulaNameType[] = [
@@ -68,6 +74,7 @@ export const formulaNameList: formulaNameType[] = [
   "mtx",
   "docetaxel",
   "gemcitabinePlusCisplatin",
+  "abvd",
 ];
 
 export const drugNameList: drugNameType[] = [
@@ -101,6 +108,10 @@ export const formulaGroupList: formulaGroupListType = {
   prostateCancer: {
     displayName: "Prostate cancer",
     formulas: ["docetaxel", "gemcitabinePlusCisplatin"],
+  },
+  hodgkinLymphoma: {
+    displayName: "Hodgkin lymphoma",
+    formulas: ["abvd"],
   },
 };
 
@@ -160,6 +171,15 @@ export const formulaList: formulaListType = {
       cisplatin: { doseRegimen: 70 },
     },
   },
+  abvd: {
+    displayName: "ABVD",
+    drugs: {
+      doxorubicin: { doseRegimen: 25 },
+      bleomycin: { doseRegimen: 10 },
+      vinblastine: { doseRegimen: 6 },
+      dacarbazine: { doseRegimen: 375 },
+    },
+  },
 };
 
 export const drugList: drugListType = {
@@ -214,5 +234,17 @@ export const drugList: drugListType = {
   cisplatin: {
     displayName: "Cisplatin",
     divider: 1,
+  },
+  bleomycin: {
+    displayName: "Bleomycin",
+    divider: 3,
+  },
+  vinblastine: {
+    displayName: "Vinblastine",
+    divider: 2,
+  },
+  dacarbazine: {
+    displayName: "Dacarbazine",
+    divider: 10,
   },
 };

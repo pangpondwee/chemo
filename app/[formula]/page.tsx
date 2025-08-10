@@ -23,12 +23,13 @@ const backgroundColors = {
   folfox4: "from-[#CEDBFD] to-[#CCFFF3]",
   folfiri: "from-[#CEDBFD] to-[#CCFFF3]",
   capox: "from-[#CEDBFD] to-[#CCFFF3]",
-  fac: "from-[#F5CCFF] to-[#FFE3CC]",
-  ac: "from-[#F5CCFF] to-[#FFE3CC]",
-  paclitaxel: "from-[#F5CCFF] to-[#FFE3CC]",
+  fac: "from-[#E1C4F2] to-[#BEE1F8]",
+  ac: "from-[#E1C4F2] to-[#BEE1F8]",
+  paclitaxel: "from-[#E1C4F2] to-[#BEE1F8]",
   mtx: "from-[#D0FFCC] to-[#D9F1E6]",
   docetaxel: "from-[#FFCA99] to-[#F7D9D4]",
   gemcitabinePlusCisplatin: "from-[#FFCA99] to-[#F7D9D4]",
+  abvd: "from-[#F0B9EF] via-[#F2DFC1] to-[#AED1EF]",
 };
 
 const calculateMl = (drug: drugNameType, drugListStore: drugListType) => {
