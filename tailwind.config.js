@@ -22,7 +22,7 @@ module.exports = {
         md: "0px 0px 16px 0px rgba(39, 39, 63, 0.08)",
       },
       fontFamily: {
-        sans: ["var(--font-anuphan)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-inter)", "var(--font-sarabun)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",

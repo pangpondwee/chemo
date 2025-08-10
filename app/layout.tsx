@@ -1,15 +1,21 @@
 import "./globals.css";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/themeProvider";
-import { ModeToggle } from "@/components/modeToggle";
+// import { ModeToggle } from "@/components/modeToggle";
 import { Analytics } from "@vercel/analytics/react";
-import Link from "next/link";
-import { Anuphan } from "next/font/google";
+// import Link from "next/link";
+import { Inter, Sarabun } from "next/font/google";
 
-const anuphan = Anuphan({
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+});
+
+const sarabun = Sarabun({
   subsets: ["latin", "thai"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-anuphan",
+  variable: "--font-sarabun",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${anuphan.variable} font-sans`}>
+      <body className={`${inter.variable} ${sarabun.variable} font-sans`}>
         <ThemeProvider attribute="class" forcedTheme="light">
           {/* <div className="flex flex-col">
             <div className="flex items-center place-content-between p-4 border-b border-border">
