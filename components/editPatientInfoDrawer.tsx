@@ -97,7 +97,7 @@ export default function EditPatientInfoDrawer() {
                     <FormControl>
                       <Input
                         type="number"
-                        inputMode="numeric"
+                        inputMode="decimal"
                         id="BW"
                         {...field}
                         value={field.value === 0 ? "" : field.value}
@@ -119,7 +119,7 @@ export default function EditPatientInfoDrawer() {
                     <FormControl>
                       <Input
                         type="number"
-                        inputMode="numeric"
+                        inputMode="decimal"
                         id="HT"
                         {...field}
                         value={field.value === 0 ? "" : field.value}
