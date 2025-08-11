@@ -119,7 +119,7 @@ export default function FormulaPage({ params }: FormulaPageProps) {
                     <Input
                       id={`${formula}-${drug}`}
                       type="number"
-                      inputMode="numeric"
+                      inputMode="decimal"
                       value={
                         drugListStore[drug] === 0 ? "" : drugListStore[drug]
                       }
